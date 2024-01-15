@@ -14,29 +14,29 @@ jobs:
         run: npm ci
       - name: lint action
         run: npm lint
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Get code
-          uses: actions/checkout@v3
-        - name: Installing Node js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 18
-        - name: install dependencies
-          run: npm ci
-        - name: Runs the test
-          run: npm test
-    Deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Get code
-          uses: actions/checkout@v3
-        - name: Installing Node js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 18
-        - name: install dependencies
-          run: npm ci
-        - name: Deployment
-          run: npm build
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Installing Node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: install dependencies
+        run: npm ci
+      - name: Runs the test
+        run: npm test
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Installing Node js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: install dependencies
+        run: npm ci
+      - name: Deployment
+        run: npm build
