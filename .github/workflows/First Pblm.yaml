@@ -1,7 +1,7 @@
 name: First workflow to execute three actions
 on: push
 jobs:
-  lint action:
+  lint_action:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
